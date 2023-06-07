@@ -185,9 +185,9 @@ class Paginator
             $pagination .= '<ul class="pagination ' . $this->_paginatorUlCssClass . '" data-pagination-current="' . $this->_pageIdentifierFromGet . '" data-pagination-prev="' . $prevDataAttribute . '" data-pagination-next="' . $nextDataAttribute . '" data-pagination-length="' . $lastpage . '">';
 
             if ($this->_pageIdentifierFromGet > 1) {
-                $pagination .= '<li class="' . $this->_paginatorStartCssClass . '"><a href="' . $path . $this->_instance . '=' . $prev . '">' . $this->_paginatorStartChar . '</a></li>';
+                $pagination .= '<li class="' . $this->_paginatorStartCssClass . '"><a class="page-link" href="' . $path . $this->_instance . '=' . $prev . '">' . $this->_paginatorStartChar . '</a></li>';
             } else {
-                $pagination .= '<li class="' . $this->_paginatorStartCssClass . '"><span>' . $this->_paginatorStartChar . '</span></li>';
+                $pagination .= '<li class="' . $this->_paginatorStartCssClass . '"><span class="page-link">' . $this->_paginatorStartChar . '</span></li>';
             }
 
             if ($lastpage < 7 + ($this->_adjacent * 2)) {
@@ -230,9 +230,9 @@ class Paginator
             }
 
             if ($this->_pageIdentifierFromGet < $counter - 1) {
-                $pagination .= '<li class="' . $this->_paginatorEndCssClass . '"><a href="' . $path . $this->_instance . '=' . $next . '">' . $this->_paginatorEndChar . '</a></li>';
+                $pagination .= '<li class="' . $this->_paginatorEndCssClass . '"><a class="page-link" href="' . $path . $this->_instance . '=' . $next . '">' . $this->_paginatorEndChar . '</a></li>';
             } else {
-                $pagination .= '<li class="' . $this->_paginatorEndCssClass . '"><span>' . $this->_paginatorEndChar . '</span></li>';
+                $pagination .= '<li class="' . $this->_paginatorEndCssClass . '"><span class="page-link">' . $this->_paginatorEndChar . '</span></li>';
             }
 
             $pagination .= '</ul>';
