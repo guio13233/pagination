@@ -465,7 +465,7 @@ class Paginator
         $textAndOrLink = '<a class="page-link" href="' . $path . $this->_instance . '=' . $counter . '">' . $counter . '</a>';
 
         if ($this->_withLinkInCurrentLi === false) {
-            $currentTextAndOrLink = '<span>' . $counter . '</span>';
+            $currentTextAndOrLink = '<span class="page-link">' . $counter . '</span>';
         } else {
             $currentTextAndOrLink = $textAndOrLink;
         }
